@@ -1,0 +1,16 @@
+header {
+	width: 100%;
+	height: 150px;
+	background-color: #5E299A;
+}
+header .container {
+	position: relative;
+}
+header .header-black {
+	background-color: #000;
+	height: 40px;
+}
+header #logotipo {
+	position: absolute;
+	top: -20px;
+}
