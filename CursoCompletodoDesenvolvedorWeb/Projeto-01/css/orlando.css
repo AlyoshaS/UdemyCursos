@@ -1,4 +1,4 @@
-html, body, ul {
+html, body, ul, img {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -6,7 +6,6 @@ html, body, ul {
 	font: inherit;
 	vertical-align: baseline;
 }
-
 header{
   width: 100%;
   height: 150px;
@@ -21,10 +20,85 @@ header .header-black{
 	background-color: #000;
 	height: 40px;
 }
+header .header-black li{
+	background-image: url("../img/clubs.png");
+	background-repeat: no-repeat;
+	display: inline-block;
+	margin: 4px 4px;
+}
+header .header-black li.club-01 {
+	background-position: 0px 0px;
+}
+header .header-black li.club-02 {
+	background-position: -46px 0px;
+}
+header .header-black li.club-03 {
+	background-position: -93px 0px;
+}
+header .header-black li.club-04 {
+	background-position: -139px 0px;
+}
+header .header-black li.club-05 {
+	background-position: -188px 0px;
+}
+header .header-black li.club-06 {
+	background-position: -239px 0px;
+}
+header .header-black li.club-07 {
+	background-position: -287px 0px;
+}
+header .header-black li.club-08 {
+	background-position: -334px 0px;
+}
+header .header-black li.club-09 {
+	background-position: -381px 0px;
+}
+header .header-black li.club-10 {
+	background-position: -430px 0px;
+}
+header .header-black li.club-11 {
+	background-position: -479px 0px;
+}
+header .header-black li.club-12 {
+	background-position: -529px 0px;
+}
+header .header-black li.club-13 {
+	background-position: -578px 0px;
+}
+header .header-black li.club-14 {
+	background-position: -629px 0px;
+}
+header .header-black li.club-15 {
+	background-position: -675px 0px;
+}
+header .header-black li.club-16 {
+	background-position: -721px 0px;
+}
+header .header-black li.club-17 {
+	background-position: -763px 0px;
+}
+header .header-black li.club-18 {
+	background-position: -808px 0px;
+}
+header .header-black li.club-19 {
+	background-position: -856px 0px;
+}
+header .header-black li.club-20 {
+	background-position: -901px 0px;
+}
+header .header-black li.club-21 {
+	background-position: -948px 0px;
+}
+header .header-black li.club-22 {
+	background-position: -995px 0px;
+}
+header .header-black li a {
+	width: 32px;
+	height: 32px;
+	display: block;
+}
+
 header #logotipo {
 	position: absolute;
-	left: 136px;
-	top: -20px;
-
-
+	top: -22px;
 }
