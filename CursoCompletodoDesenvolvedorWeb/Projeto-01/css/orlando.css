@@ -2,9 +2,12 @@ html, body, ul, img {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+
+}
+@@font-face {
+	font-family: 'OpenSans';
+	src: url("../fonts/Open_Sans/OpenSans-Regular.ttf");
+	font-size: 1em;
 }
 header{
   width: 100%;
@@ -100,5 +103,17 @@ header .header-black li a {
 
 header #logotipo {
 	position: absolute;
-	top: -22px;
+	top: 20px;
+}
+#menu {
+	margin: 26px 0;
+}
+#menu li {
+	display: inline-block;
+	font-family: "OpenSans"
+}
+#menu li a {
+	color: #FFF;
+	font-size: 16px;
+	padding: 10px 25px;
 }
