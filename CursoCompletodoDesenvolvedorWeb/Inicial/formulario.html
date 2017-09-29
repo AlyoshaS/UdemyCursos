@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Curso Completo do Desenvolvedor Web</title>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	</head>
+	<body>
+		<form method="POST" action="index.php">
+			<div class="form-group">
+				<label for="nome">Nome</label>
+				<input type="text" name="nome" id="nome" class="form-control" placeholder="Digite o seu nome" autofocus="" required tabindex="1" disabled>
+			</div>
+			<div class="form-group">
+				<label for="email">email</label>
+				<input type="email" name="email" id="email" class="form-control" placeholder="seu@email.com.br" required>
+			</div>
+			<div class="form-group">
+				<label for="nascimento">Nascimento</label>
+				<input type="date" name="nascimento" id="nascimento" class="form-control" required min="2016-01-01">
+			</div>
+			<div class="form-group">
+				<label>Sexo:</label>
+				<input type="radio" name="Sexo" id="masculino">
+				<label for="masculino">Masculino</label>
+				<input type="radio" name="Sexo" id="feminino">
+				<label for="feminino">Feminino</label>
+			</div>
+			<div class="form-group">
+				<label for="li">Li o contrato</label>
+				<input type="checkbox" name="li" id="li" required checked>
+			</div>
+			<!-- para casos em que eu precise adicionar volume (quando fica rolando música/radios etc) -->
+			<div class="form-group">
+				<label for="volume">Volume</label>
+				<input type="range" name="volume" id="volume" min="0" max="100" value="25">
+			</div>
+			<div class="form-group">
+				<label for="meter">Bateria</label>
+				<meter min="0" namw="meter" max="100" low="15" value="12">50</meter> 
+			</div>
+			<div class="form-group">
+				<label for="meter">Carregando</label>
+				<progress min="0" max="100" value="60">60%</progress>
+			</div>
+			<div class="form-group">
+				<label for="ano">Ano Fabricação</label>
+				<input type="number" name="ano" id="ano" min="1920" step="20" max="2017" value="2016" class="form-control">
+			</div>
+			<!-- Selecionar a cor-->
+			<div class="form-group">
+				<label for="cor">Cor</label>
+				<input type="color" name="cor" id="cor" class="form-control">
+			</div>
+			<div class="form-group">
+				<label for="url">url</label>
+				<input type="number" name="url" id="url" class="form-control">
+			</div>
+			<div class="form-group">
+				<label for="busca">Busca</label>
+				<input type="search" name="busca" id="busca" class="form-control">
+			</div>
+			<div class="form-group">
+				<label for="busca">Mensagem</label>
+				<textarea name="mensagem" id="mensagem" cols="50" rows="5" ></textarea>
+			</div>
+			<div class="form-group">
+				<label for="estados">Estado</label>
+				<select name="estados" id="estados">
+					<optgroup label="Sudeste">
+					<option value="SP">São Paulo</option>
+					<option value="MG" selected>Minas Gerais</option>
+					<option value="RJ">Rio de Janeiro</option>
+					</optgroup>
+					<optgroup label="Sul">
+					<option value="PR">Paraná</option>
+					<option value="SC">Santa Catarina</option>
+					<option value="RS">Rio Grande do Sul</option>
+					</optgroup>
+				</select>
+			</div>
+			<input type="hidden" name="id" value="1">
+			<div class="form-group">
+				<label for="senha">Senha</label>
+				<input type="password" name="senha" id="senha" class="form-control">
+			</div>
+			<div class="form-group">
+				<label for="mes">Mês</label>
+				<input type="month" name="mes" id="mes" class="form-control">
+			</div>
+			<div class="form-group">
+				<label for="semana">Semana</label>
+				<input type="week" name="semana" id="semana" class="form-control">
+			</div>
+			<div class="form-group">
+				<label for="time">Hora</label>
+				<input type="time" name="time" id="time" class="form-control">
+			</div>
+			<div class="form-group">
+			<input type="text" list="navegadores">
+			<datalist id="navegadores">
+				<option value="Chrome">
+				<option value="Firefox">
+				<option value="Safari">
+				<option value="Edge">
+			</datalist>
+			</div>
+
+
+			<div>
+				<button type="submit" class="btn btn-primary">Cadastrar</button>
+			</div>
+		</form>
+
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+	</body>
+</html>
