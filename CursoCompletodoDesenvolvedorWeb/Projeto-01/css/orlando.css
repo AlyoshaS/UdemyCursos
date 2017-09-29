@@ -2,22 +2,26 @@ html, body, ul, img {
 	margin: 0;
 	padding: 0;
 	border: 0;
-
 }
 @@font-face {
 	font-family: 'OpenSans';
 	src: url("../fonts/Open_Sans/OpenSans-Regular.ttf");
 	font-size: 1em;
 }
+@font-face {
+	font-family: 'OpenSans-Light';
+	src: url("../fonts/Open_Sans/OpenSans-Light.ttf");
+	font-size: 1em;
+}
 header{
   width: 100%;
   height: 150px;
-  background-color: #5E299A;
+  background-color: rgba(94, 41, 154, .8);
+	z-index: 2;
+	position: relative;
 	}
 header .container {
 	position: relative;
-
-
 }
 header .header-black{
 	background-color: #000;
@@ -27,7 +31,7 @@ header .header-black li{
 	background-image: url("../img/clubs.png");
 	background-repeat: no-repeat;
 	display: inline-block;
-	margin: 4px 4px;
+	margin: 4px;
 }
 header .header-black li.club-01 {
 	background-position: 0px 0px;
@@ -121,6 +125,7 @@ header #logotipo {
 	border: none;
 	height: 30px;
 	line-height: 30px;
+	padding-left: 8px;
 }
 #menu li.search ::-webkit-input-placeholder {
 	color: #fff;
@@ -145,4 +150,29 @@ header #logotipo {
 }
 #menu li.search .input-group {
 	top: 8px;
+}
+#banner {
+	width: 100%;
+	height: 728px;
+	position: relative;
+	background: url("../img/banner.jpg") no-repeat;
+	background-position: 0px -100px;
+	top: -130px;
+}
+#banner h1 {
+	color: #fff;
+	top: 300px;
+	position: relative;
+	font-size: 92px;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, .45);
+	font-family: 'OpenSans-Light';
+	margin-left: 50px;
+}
+#banner h1 small {
+	font-size: 32px;
+	display: block;
+	color: #FFF;
+	font-family: 'OpenSans';
+	font-weight: bold;
+	margin-left: 13px;
 }
