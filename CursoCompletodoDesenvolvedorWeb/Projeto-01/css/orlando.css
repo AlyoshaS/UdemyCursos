@@ -266,3 +266,33 @@ header #logotipo {
 	margin: 0 auto;
 	max-width: 400px;
 }
+footer {
+	margin-top: 110px;
+}
+footer .row{
+	width: 102%;
+}
+footer .row p {
+	line-height: 60px;
+	margin-bottom: 0;
+}
+footer .row-cinza-claro {
+	height: 200px;
+	background-color: #171F26;
+}
+footer .row-cinza-escuro {
+	height: 60px;
+	background-color: #11171D;
+	border-top: #242D37 1px solid;
+}
+footer .pull-left {
+	font-family: 'OpenSans';
+	font-size: 14px;
+	color: #666;
+}
+footer .text-roxo {
+	color: #623291;
+	font-family: 'OpenSans';
+	font-weight: bold;
+	font-size: 14px;
+}
