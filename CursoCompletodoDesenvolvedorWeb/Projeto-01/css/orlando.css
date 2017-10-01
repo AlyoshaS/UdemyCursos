@@ -3,7 +3,7 @@ html, body, ul, img {
 	padding: 0;
 	border: 0;
 }
-@@font-face {
+@font-face {
 	font-family: 'OpenSans';
 	src: url("../fonts/Open_Sans/OpenSans-Regular.ttf");
 	font-size: 1em;
