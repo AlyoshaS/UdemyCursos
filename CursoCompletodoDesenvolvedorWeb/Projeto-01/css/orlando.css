@@ -220,6 +220,12 @@ header #logotipo {
 	font-size:  18px;
 	font-family: 'OpenSans';
 }
+#news .tumbnails .item-inner {
+	padding: 10px;
+}
+#news .tumbnails .item-inner img {
+	width: 100%;
+}
 #estatisticas {
 	background-color:#5E299A;
 	width: 100%;

@@ -4,6 +4,8 @@
 		<meta charset="utf-8">
 		<title>Orlando City</title>
 		<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="lib/OwlCarousel2-2.2.1/dist/assets/owl.carousel.min.css">
+		<link rel="stylesheet" href="lib/OwlCarousel2-2.2.1/dist/assets/owl.theme.default.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/orlando.css">
 	</head>
@@ -87,36 +89,72 @@
 							<hr>
 					</div>
 
-					<div class="row tumbnails">
+					<div class="row tumbnails owl-carousel owl-theme">
 
-							<div class="col-md-3">
-
-								<img src="img/noticia-thumb.jpg" alt="Noticia">
-								<h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
-								<time>December 21, 2015</time>
-
+							<div class="item">
+								<div class="item-inner">
+									<img src="img/noticia-thumb.jpg" alt="Noticia">
+									<h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
+									<time>December 21, 2015</time>
+								</div>
 							</div>
-							<div class="col-md-3">
-
-								<img src="img/noticia-thumb.jpg" alt="Noticia">
-								<h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
-								<time>December 21, 2015</time>
-
+							<div class="item">
+								<div class="item-inner">
+									<img src="img/noticia-thumb.jpg" alt="Noticia">
+									<h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
+									<time>December 21, 2015</time>
+								</div>
 							</div>
-							<div class="col-md-3">
-
-								<img src="img/noticia-thumb.jpg" alt="Noticia">
-								<h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
-								<time>December 21, 2015</time>
-
+							<div class="item">
+								<div class="item-inner">
+									<img src="img/noticia-thumb.jpg" alt="Noticia">
+									<h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
+									<time>December 21, 2015</time>
+								</div>
 							</div>
-							<div class="col-md-3">
-
-								<img src="img/noticia-thumb.jpg" alt="Noticia">
-								<h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
-								<time>December 21, 2015</time>
-
+							<div class="item">
+								<div class="item-inner">
+									<img src="img/noticia-thumb.jpg" alt="Noticia">
+									<h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
+									<time>December 21, 2015</time>
+								</div>
 							</div>
+							<div class="item">
+								<div class="item-inner">
+									<img src="img/noticia-thumb.jpg" alt="Noticia">
+									<h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
+									<time>December 21, 2015</time>
+								</div>
+							</div>
+							<div class="item">
+								<div class="item-inner">
+									<img src="img/noticia-thumb.jpg" alt="Noticia">
+									<h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
+									<time>December 21, 2015</time>
+								</div>
+							</div>
+							<div class="item">
+								<div class="item-inner">
+									<img src="img/noticia-thumb.jpg" alt="Noticia">
+									<h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
+									<time>December 21, 2015</time>
+								</div>
+							</div>
+							<div class="item">
+								<div class="item-inner">
+									<img src="img/noticia-thumb.jpg" alt="Noticia">
+									<h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
+									<time>December 21, 2015</time>
+								</div>
+							</div>
+							<div class="item">
+								<div class="item-inner">
+									<img src="img/noticia-thumb.jpg" alt="Noticia">
+									<h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
+									<time>December 21, 2015</time>
+								</div>
+							</div>
+					</div> <!-- /row tumbnails owl-carousel owl-theme-->
 
 			</div><!-- /news -->
 
@@ -263,6 +301,7 @@
 		</footer>
 
 		<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+		<script src="lib/OwlCarousel2-2.2.1/dist/owl.carousel.min.js"></script>
 		<script src="lib/bootstrap/js/bootstrap.min.js"></script>
 		<script>
 		$(document).ready(function(){
@@ -285,8 +324,25 @@
 
 						$("li.search").removeClass("ativo");
 
-				})
+				});
 
+				$(".tumbnails").owlCarousel({
+					loop: true,
+					margin:10,
+					//nav: true,
+					//navText: ["Anterior", "Próximo"],
+					responsive: {
+						0:{
+							items: 1
+						} ,
+						480: {
+							items: 3
+						},
+						768: {
+							items: 4
+						}
+					}
+				});
 		});
 		</script>
 	</body>
