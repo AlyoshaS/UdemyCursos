@@ -90,7 +90,7 @@
 							<hr>
 					</div>
 
-					<div class="row tumbnails owl-carousel owl-theme">
+					<div class="row thumbnails owl-carousel owl-theme">
 
 							<div class="item">
 								<div class="item-inner">
@@ -155,7 +155,7 @@
 									<time>December 21, 2015</time>
 								</div>
 							</div>
-					</div> <!-- /row tumbnails owl-carousel owl-theme-->
+					</div> <!-- /row thumbnails owl-carousel owl-theme-->
 
 			</div><!-- /news -->
 
@@ -304,47 +304,6 @@
 		<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 		<script src="lib/OwlCarousel2-2.2.1/dist/owl.carousel.min.js"></script>
 		<script src="lib/bootstrap/js/bootstrap.min.js"></script>
-		<script>
-		$(document).ready(function(){
-
-			$("#logotipo").on("mouseover", function(){
-
-				$("#banner h1").addClass("efeito");
-
-			}).on("mouseout", function(){
-
-				$("#banner h1").removeClass("efeito");
-
-			});
-
-				$("#input-search").on("focus", function(){
-
-						$("li.search").addClass("ativo");
-
-				}).on("blur", function(){
-
-						$("li.search").removeClass("ativo");
-
-				});
-
-				$(".tumbnails").owlCarousel({
-					loop: true,
-					margin:10,
-					//nav: true,
-					//navText: ["Anterior", "Próximo"],
-					responsive: {
-						0:{
-							items: 1
-						} ,
-						480: {
-							items: 3
-						},
-						768: {
-							items: 4
-						}
-					}
-				});
-		});
-		</script>
+		<script src="js/efeitos.js"></script>
 	</body>
 </html>

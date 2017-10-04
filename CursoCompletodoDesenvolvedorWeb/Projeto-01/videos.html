@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+<html lang="pt-br">
 <html>
 	<head>
 		<meta charset="utf-8">
 		<title>Orlando City</title>
 		<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="lib/OwlCarousel2-2.2.1/dist/assets/owl.carousel.min.css">
-		<link rel="stylesheet" href="lib/OwlCarousel2-2.2.1/dist/assets/owl.theme.default.min.css">
+		<!-- <link rel="stylesheet" href="lib/OwlCarousel2-2.2.1/dist/assets/owl.theme.default.min.css"> -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="css/orlando.css">
 	</head>
@@ -88,13 +89,75 @@
 
 								<div class="row">
 
-										videos ---
+									<video src="mp4/highlights.mp4" controls poster="img/highlights.jpg"> </video>
+									<!-- <audio src="mp3/audio.mp3"></audio> -->
 
 								</div>
 
 						</div><!-- /container -->
 
 				</div><!-- /call-to-action -->
+
+				<div id="news" class="container" style="top:0"><!-- /style não é uma boa prática(latest news em cima do vídeo) -->
+
+						<div class="row text-center">
+								<h2>Latest News</h2>
+								<hr>
+						</div>
+
+						<div class="row thumbnails owl-carousel owl-theme">
+								<div class="item" data-video="highlights"><!-- /1 -->
+										<div class="item-inner">
+												<img src="img/highlights.jpg" alt="Noticia">
+												<h3>Highlights</h3>
+										</div>
+								</div>
+								<div class="item" data-video="Orlando_City_Foundation_2015"><!-- /2 -->
+										<div class="item-inner">
+												<img src="img/Orlando_City_Foundation_2015.jpg" alt="Noticia">
+												<h3>Orlando City Foundation 2015</h3>
+										</div>
+								</div>
+								<div class="item" data-video="highlights"><!-- /3 -->
+										<div class="item-inner">
+												<img src="img/highlights.jpg" alt="Noticia">
+												<h3>Highlights</h3>
+										</div>
+								</div>
+								<div class="item" data-video="Orlando_City_Foundation_2015"><!-- /4 -->
+										<div class="item-inner">
+												<img src="img/Orlando_City_Foundation_2015.jpg" alt="Noticia">
+												<h3>Orlando City Foundation 2015</h3>
+										</div>
+								</div>
+								<div class="item" data-video="highlights"><!-- /5 -->
+										<div class="item-inner">
+												<img src="img/highlights.jpg" alt="Noticia">
+												<h3>Highlights</h3>
+										</div>
+								</div>
+								<div class="item" data-video="Orlando_City_Foundation_2015"><!-- /6 -->
+										<div class="item-inner">
+												<img src="img/Orlando_City_Foundation_2015.jpg" alt="Noticia">
+												<h3>Orlando City Foundation 2015</h3>
+										</div>
+								</div>
+								<div class="item" data-video="highlights"><!-- /5 -->
+										<div class="item-inner">
+												<img src="img/highlights.jpg" alt="Noticia">
+												<h3>Highlights</h3>
+										</div>
+								</div>
+								<div class="item" data-video="Orlando_City_Foundation_2015"><!-- /6 -->
+										<div class="item-inner">
+												<img src="img/Orlando_City_Foundation_2015.jpg" alt="Noticia">
+												<h3>Orlando City Foundation 2015</h3>
+										</div>
+								</div>
+
+						</div> <!-- /row thumbnails-->
+
+				</div><!-- /news -->
 
 		</section>
 
@@ -192,47 +255,22 @@
 		<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 		<script src="lib/OwlCarousel2-2.2.1/dist/owl.carousel.min.js"></script>
 		<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+		<script src="js/efeitos.js"></script>
 		<script>
-		$(document).ready(function(){
+		$(function(){
 
-			$("#logotipo").on("mouseover", function(){
+				$(".thumbnails .item").on("click", function(){
 
-				$("#banner h1").addClass("efeito");
-
-			}).on("mouseout", function(){
-
-				$("#banner h1").removeClass("efeito");
-
-			});
-
-				$("#input-search").on("focus", function(){
-
-						$("li.search").addClass("ativo");
-
-				}).on("blur", function(){
-
-						$("li.search").removeClass("ativo");
+					$("video").attr({
+						"src":"mp4/"+$(this).data("video")+".mp4",
+						"poster":"img/"+$(this).data("video")+".jpg"
+					});
 
 				});
 
-				$(".tumbnails").owlCarousel({
-					loop: true,
-					margin:10,
-					//nav: true,
-					//navText: ["Anterior", "Próximo"],
-					responsive: {
-						0:{
-							items: 1
-						} ,
-						480: {
-							items: 3
-						},
-						768: {
-							items: 4
-						}
-					}
-				});
 		});
+
 		</script>
+
 	</body>
 </html>
