@@ -5,6 +5,7 @@
 		<meta charset="utf-8">
 		<title>Orlando City</title>
 		<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="lib/plyr/dist/plyr.css">
 		<link rel="stylesheet" href="lib/OwlCarousel2-2.2.1/dist/assets/owl.carousel.min.css">
 		<!-- <link rel="stylesheet" href="lib/OwlCarousel2-2.2.1/dist/assets/owl.theme.default.min.css"> -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -89,7 +90,13 @@
 
 								<div class="row">
 
-									<video src="mp4/highlights.mp4" controls poster="img/highlights.jpg"> </video>
+									<div class="player">
+											<video src="mp4/highlights.mp4" controls poster="img/highlights.jpg"> </video>
+									</div>
+									<input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+
+									<button type="button" id="btn-play-pause" class="btn btn=sucess">PLAY</button>
+
 									<!-- <audio src="mp3/audio.mp3"></audio> -->
 
 								</div>
@@ -253,20 +260,56 @@
 		</footer>
 
 		<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+		<script src="lib/plyr/dist/plyr.js"></script>
 		<script src="lib/OwlCarousel2-2.2.1/dist/owl.carousel.min.js"></script>
 		<script src="lib/bootstrap/js/bootstrap.min.js"></script>
 		<script src="js/efeitos.js"></script>
 		<script>
+		(function(d, p){
+				var a = new XMLHttpRequest(),
+						b = d.body;
+				a.open("GET", p, true);
+				a.send();
+				a.onload = function(){
+						var c = d.createElement("div");
+						c.style.display = "none";
+						b.insertBefore(c, b.childNodes[0]);
+				}
+		})(document, "lib/plyr/dist/sprite.sgv");
+		</script>
+		<script>
 		$(function(){
 
 				$(".thumbnails .item").on("click", function(){
+						$("video").attr({
+							"src":"mp4/"+$(this).data("video")+".mp4",
+							"poster":"img/"+$(this).data("video")+".jpg"
+						});
+				});
 
-					$("video").attr({
-						"src":"mp4/"+$(this).data("video")+".mp4",
-						"poster":"img/"+$(this).data("video")+".jpg"
-					});
+				$("#volume").on("mousemove", function(){
+
+					$("video")[0].volume = parseFloat($(this).val());
 
 				});
+				$("#btn-play-pause").on("click", function(){
+
+						$(this).toggleClass("btn-success btn-danger");
+
+						var video = $("video")[0];
+
+						if ($(this).hasClass("btn-success")) {
+								$(this).text("STOP");
+								video.play();
+						} else {
+								$(this).text("PLAY");
+								video.pause();
+						};
+
+				});
+				plyr.setup();//Disparando player PLYR
+
+
 
 		});
 
