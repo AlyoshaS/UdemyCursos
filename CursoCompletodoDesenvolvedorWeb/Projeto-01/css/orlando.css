@@ -254,6 +254,7 @@ header #logotipo {
 	border: #FDE192 solid 5px;
 	width: 200px;
 	margin: 0 auto;
+	margin-bottom: 45px;
 }
 #call-to-action p {
 	margin-top:  60px;
