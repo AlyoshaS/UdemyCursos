@@ -1,0 +1,79 @@
+/*Tamanho padrão para tablets*/
+@media only screen and (max-width: 768px) {
+  .header-black ul li {
+    display: none;
+  }
+}
+
+/*Tamanho padrão para smartphones*/
+@media only screen and (max-width: 480px) {
+  .header-black ul, #menu {
+    display: none;
+  }
+  #logotipo {
+    left: 32%;
+  }
+  #btn-bars, #btn-search {
+    color: #fff;
+    font-size: 22px;
+    top: 4px;
+    position: absolute;
+    background: none;
+    border: none;
+    display: block;
+  }
+  #btn-bars {
+    left: 4px;
+  }
+  #btn-search {
+    right: 4px;
+  }
+}
+#banner {
+  height: 317px;
+  background-size: cover;
+  background-position: 0;
+  text-align: center;
+}
+#banner h1 {
+  top: 180px;
+  font-size: 48px;
+  margin-left: 0;
+}
+#banner h1 small {
+  font-size: 22px;
+}
+#news h2 {
+  font-size: 32px;
+}
+#news hr {
+  border-width: 4px;
+}
+.owl-carousel .owl-wrapper-outer {
+  margin-left: 15px;
+}
+.thumbnails {
+  text-align: center;
+}
+
+
+/*========== Mobile First Method ==========*/
+ /* Custom, iPhone Retina */
+/* @media only screen and (min-width : 320px) {
+
+ /*}
+ /* Extra Small Devices, Phones */
+ /*@media only screen and (min-width : 480px) {
+ /*}
+ /* Small Devices, Tablets */
+ /*@media only screen and (min-width : 768px) {
+ /*}
+/* Medium Devices, Desktops */
+ /*@media only screen and (min-width : 992px) {
+
+ /*}
+
+ /* Large Devices, Wide Screens */
+ /*@media only screen and (min-width : 1200px) {
+
+ /*}
