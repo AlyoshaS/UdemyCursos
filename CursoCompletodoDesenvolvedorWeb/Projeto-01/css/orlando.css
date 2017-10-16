@@ -393,3 +393,6 @@ footer .list-socials i {
 video {
 	width: 60%;
 }
+#btn-bars, #btn-search {
+	display: none;
+}
