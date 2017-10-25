@@ -285,14 +285,16 @@ footer {
 	margin-top: 110px;
 }
 footer .row{
-	width: 102%;
+	width: 100%;
+	margin-left: 0;
+	/*margin-left desse caso era o que estava deixando aquela barra lateral*/
 }
 footer .row p {
 	line-height: 55px;
 	margin-bottom: 0;
 }
 footer .row-cinza-claro {
-	height: 200px;
+	height: 240px;
 	background-color: #171F26;
 }
 footer .row-cinza-escuro {

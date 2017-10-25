@@ -6,7 +6,7 @@
 }
 /*Tamanho padrão para smartphones*/
 @media only screen and (max-width: 480px) {
-  .header-black ul, #menu{
+  .header-black ul, #menu {
     display: none;
   }
   #logotipo {
@@ -81,26 +81,108 @@
   .owl-theme, .owl-nav, .owl-dots {
     display: none;
   }
+  #estatisticas {
+    height: inherit;
+  }
+  #estatisticas p {
+  	margin-bottom: 40px;
+    margin-top: 40px;
+  }
+  #call-to-action {
+  	margin-top: 69px;
+  }
+  #call-to-action p {
+  	margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  #call-to-action hr {
+  	border-width: 4px;
+  }
+  #call-to-action h2 {
+  	font-size: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  #call-to-action .btn {
+    min-width: 125px;
+  }
+  #call-to-action .btn-roxo {
+    float: left;
+  }
+  #call-to-action .btn-amarelo {
+    float: right;
+  }
+  #call-to-action .row-max-400 {
+    max-width: 100%;
+  }
+  footer {
+    margin-top: 60px;
+  }
+  .copyright-mobile p {
+    font-size: 10px;
+    line-height: 0;
+  }
+  .copyright-mobile .pull-left {
+    float: inherit !important;
+  }
+  footer .row p {
+    text-align: center;
+    line-height: 20px;
+    margin-bottom: -4px;
+    /* no curso eles colocam o valor em px, mas preciso trocar para porcentagem
+    e 75% vai ficar bacana!(você já leu sobre isso!!)*/
+  }
+  footer .row p:first-child {
+    margin-top: 10px;
+    margin-left: 13px;
+    /*se eu quisesse aplicar só no segundo p deveria usar:
+    footer .row p:nth-child(2) - Seletores(?) do CSS3 */
+  }
+  footer .text-roxo {
+    margin-right: 7px;
+  }
+  footer .row {
+    margin: 0;
+  }
+  footer .list-socials {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 60px;
+    margin-left: 10px;
+  }
+  footer .col-md-10 {
+    padding: 0;
+  }
+  footer .list-socials a {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+  }
+  footer .list-socials i {
+    font-size: 28px;
+    margin: 7px auto;
+  }
+  footer .row-cinza-claro {
+    height: 157px;
+  }
+  footer .btn-footer {
+    width: 100%;
+    background-color: #11171D;
+    height: 42px;
+    line-height: 30px;
+  }
+  footer .col-xs-6 {
+    padding: 0;
+    padding-right: 5px;
+  }
+  footer .col-xs-6:last-child {
+    padding-right: 0;
+    padding-left: 5px;
+  }
+  footer .visible-xs {
+    margin-top: -10px;
+  }
 }
-
-
-/*========== Mobile First Method ==========*/
- /* Custom, iPhone Retina */
-/* @media only screen and (min-width : 320px) {
-
- /*}
- /* Extra Small Devices, Phones */
- /*@media only screen and (min-width : 480px) {
- /*}
- /* Small Devices, Tablets */
- /*@media only screen and (min-width : 768px) {
- /*}
-/* Medium Devices, Desktops */
- /*@media only screen and (min-width : 992px) {
-
- /*}
-
- /* Large Devices, Wide Screens */
- /*@media only screen and (min-width : 1200px) {
-
- /*}

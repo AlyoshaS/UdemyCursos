@@ -2,8 +2,8 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<!-- <meta name="viewport" content="width=device-width, initial-scale=1" ; user-scalable=0;> -->
-		<meta name="viewport" content="width=device-width, initial-scale=0.89, maximum-scale=0.89, user-scalable=no">
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1" ; user-scalable=0;shrink-to-fit=no > -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
 		<title>Orlando City</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<link rel="stylesheet" href="lib/OwlCarousel2-2.2.1/dist/assets/owl.carousel.min.css">
@@ -232,7 +232,9 @@
 
 							<div class="row">
 
-									<div class="col-md-2 text-center">
+									<div class="col-md-2 text-center hidden-xs">
+										<!-- O hidden-xs é uma classe do bootstrap que 'esconde' o logotipo (ou qualquer coisa que vc queira)
+										 sem precisar colocar no css 'display: none'-->
 
 											<img id="logotipo" src="img/orlando-logo.png" alt="Logotipo">
 
@@ -240,7 +242,7 @@
 									<div class="col-md-10">
 
 												<div class="row row-cols">
-														<div class="col-md-4 col-popular-post">
+														<div class="col-md-4 col-popular-post hidden-xs">
 
 																<h4>POPULAR POSTS</h4>
 
@@ -256,7 +258,7 @@
 																</ul>
 
 														</div>
-														<div class="col-md-4 col-links">
+														<div class="col-md-4 col-links hidden-xs">
 
 																<h4>LINKS</h4>
 
@@ -269,13 +271,22 @@
 														</div>
 														<div class="col-md-4 col-get-in-touch">
 
-																<h4>GET IN TOUCH</h4>
+																<h4 class="hidden-xs">GET IN TOUCH</h4>
 
-																<address>
+																<address class="hidden-xs">
 																		<i  class="fa fa-map-marker"></i> <span>618 E. South Street, Suite
 																		510<br/>Orlando, FL 32801</span>
 																</address>
-																<p><a href="tel:1855ORLCITY"><I class="fa fa-phone"></I>1.855.ORL.CITY</a></p>
+																<p class="hidden-xs"><a href="tel:1855ORLCITY"><I class="fa fa-phone"></I>1.855.ORL.CITY</a></p>
+
+																<div class="row-fluid visible-xs">
+																		<div class="col-xs-6">
+																				<a href="#" class="btn btn-footer"><i  class="fa fa-map-marker"></i>Location</a>
+																		</div>
+																		<div class="col-xs-6">
+																				<a href="#" class="btn btn-footer"><i  class="fa fa-phone"></i>Call</a>
+																		</div>
+																</div>
 
 																<ul class="list-unstyled list-socials">
 																		<li>
@@ -289,6 +300,9 @@
 																		</li>
 																		<li>
 																			<a href="#" target="_blank"><i class="fa fa-pinterest-p"></i></a>
+																		</li>
+																		<li>
+																			<a href="#" target="_blank" class="visible-xs"><i class="fa fa-chevron-up"></i></a>
 																		</li>
 																</ul>
 
@@ -304,7 +318,7 @@
 
 			<div class="row row-cinza-escuro">
 
-				<div class="container">
+				<div class="container copyright-mobile">
 
 						<p class="pull-left">Copyright © Orlando City Soccer 2016. All rights reserved.</p>
 						<p class="pull-right text-roxo">Created by HCODE in Udemy</p>
