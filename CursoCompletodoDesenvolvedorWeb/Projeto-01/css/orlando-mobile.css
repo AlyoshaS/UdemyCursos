@@ -9,8 +9,106 @@
   .header-black ul, #menu {
     display: none;
   }
-  #logotipo {
+  header #logotipo {
     left: 32%;
+    z-index: 10;
+    transition: 1s;
+  }
+  header.open-menu #logotipo {
+    transform: rotate(360deg);
+  }
+  header .header-black {
+    position: fixed;
+    /*o position fixed deixará o menu visível mesmo que vc esteja vendo o footer*/
+    top: 0;
+    width: 100%;
+    z-index: 9;
+  }
+  header #menu-mobile {
+    position: fixed;
+    top: 40px;
+    background-color: #fff;
+    width: 80%;
+    height: 100%;
+    left: -80%;
+    transition: 1s;
+    z-index: 5;
+    /*height: 71% + bottom: 0px; (linha 249) no header.open-menu .bar-close
+    e o tamanho do menu diminui e fica mais bonito *//
+  }
+  header.open-menu #menu-mobile {
+    left: 0;
+  }
+  header.open-menu #menu-mobile-mask {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 4;
+  }
+  header.open-menu #logotipo {
+    position: fixed;
+    top: 50px;
+    height: 76px;
+    left: calc(40% - 33px);
+    /*Função calc css3: a porcentagem utilizada para o menu-mobile (linha 201)
+    divido por 2, menos o valor da largura/2 do logotipo*/
+    z-index: 5;
+  }
+  header.open-menu #menu-mobile ul {
+    margin: 20px;
+    margin-top: 100px;
+  }
+  header.open-menu #menu-mobile li {
+    text-align: center;
+    border-top: #CCC 1px solid;
+  }
+  header.open-menu #menu-mobile li:last-child {
+    border-bottom: #CCC 1px solid;
+  }
+  header.open-menu #menu-mobile li a {
+    color: #633392;
+    font-family: 'OpenSans';
+    font-weight: bold;
+    font-size: 16px;
+    padding: 18px;
+    display: block;
+  }
+  header.open-menu .bar-close {
+    position: absolute;
+    bottom: 40px;
+    /* bottom: 0px; + height: 71% no header #menu-mobile e o
+    tamanho do menu diminui e fica mais bonito */
+    background-color: #633492;
+    height: 40px;
+    width: 100%;
+  }
+  header.open-menu .bar-close .btn-close {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 22px;
+  }
+  header #input-search-mobile {
+    transition: 1s;
+    top: -40px;
+    position: fixed;
+    width: 70%;
+    left: 15%;
+    background-color: #000;
+    border: none;
+    height: 40px;
+    color: #fff;
+    z-index: 11;
+    outline: 0;
+  }
+  header.open-search #input-search-mobile {
+    top: 0;
+  }
+  header.open-search #logotipo {
+    z-index: 9;
   }
   #btn-bars, #btn-search {
     color: #fff;
@@ -72,7 +170,7 @@
     display: block;
     position: absolute;
     top: 130px;
-    z-index: 4;
+    z-index: 1;
     outline: 0;
   }
   #btn-news-next {

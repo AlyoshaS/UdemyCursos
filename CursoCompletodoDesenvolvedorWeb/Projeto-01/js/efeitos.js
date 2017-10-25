@@ -48,4 +48,26 @@ $(document).ready(function(){
     $('#btn-news-next').on("click", function(){
       owl.trigger('next.owl.carousel');
     });
+    //Animação para quando clickar no botão do rodapé, voltar pro inicio do site
+    $("#page-up").on("click", function(event){
+        $('html, body').animate({
+          scrollTop: 0 }, 'slow');
+        event.preventDefault(); //cancela o comportamento padrão do click
+    });
+
+    //efeito para o menu-mobile header
+    $("#btn-bars").on("click", function(){
+
+        $("header").toggleClass("open-menu");
+
+    });
+    //efeito para o menu-mobile bottom(fechar)
+    $("#menu-mobile-mask, .btn-close").on("click", function(){
+      $("header").removeClass("open-menu");
+    });
+    //menu de busca
+    $("#btn-search").on("click", function(){
+      $("header").toggleClass("open-search");
+      $("input-search-mobile").focus();
+    });
 });

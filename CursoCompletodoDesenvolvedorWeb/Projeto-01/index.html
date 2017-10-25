@@ -17,6 +17,23 @@
 
 		<header>
 
+			<div id="menu-mobile-mask" class="visible-xs" ></div>
+
+			<div id="menu-mobile" class="visible-xs">
+
+				<ul class="list-unstyled">
+						<li><a href="videos.html">Vídeos</a></li>
+						<li><a href="#">Tickets</a></li>
+						<li><a href="#">News</a></li>
+						<li><a href="#">Schedule</a></li>
+				</ul>
+
+				<div class="bar-close">
+						<button type="button" class="btn-close"><i class="fa fa-close"></i></button>
+				</div>
+
+			</div>
+
 			<div class="container container-logo">
 				<img id="logotipo" src="img/orlando-logo.png" alt="Logotipo">
 			</div>
@@ -24,6 +41,8 @@
 			<div class="header-black">
 
 					<div class="container">
+
+							<input type="search" id="input-search-mobile" class="visible-xs" placeholder="search...">
 
 							<button id="btn-bars" type="button"><i class="fa fa-bars"></i></button>
 							<button id="btn-search" type="button"><i class="fa fa-search"></i></button>
@@ -302,7 +321,7 @@
 																			<a href="#" target="_blank"><i class="fa fa-pinterest-p"></i></a>
 																		</li>
 																		<li>
-																			<a href="#" target="_blank" class="visible-xs"><i class="fa fa-chevron-up"></i></a>
+																			<a href="#" id="page-up" class="visible-xs"><i class="fa fa-chevron-up"></i></a>
 																		</li>
 																</ul>
 
